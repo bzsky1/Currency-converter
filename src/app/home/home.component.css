@@ -1,0 +1,82 @@
+.home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__body {
+    margin-top: 5%;
+    background-color: #fff;
+    height: 400px;
+    width: 700px;
+    padding: 20px;
+    border: 2px solid;
+}
+
+.home__title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 1px solid gold;
+}
+
+.converter {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.converter input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid;
+    width: 140px;
+    margin-right: 20px;
+    font-size: 26px;
+}
+
+.converter input:focus {
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.converter input::placeholder {
+    font-size: 14px;
+    color: rgba(255, 217, 0, 0.782);
+}
+
+.converter select:focus {
+    outline: none;
+
+}
+
+.converter input::-webkit-outer-spin-button,
+.converter input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.converter select {
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+}
+
+.converter input, .converter select {
+    font-family: 'Shantell Sans', cursive
+}
+
+.converter__input-block {
+    width: 230px;
+}
+
+.converter__to {
+    font-size: 36px;
+}
+.converter__right {
+    position: relative;
+    left: 25px;
+}

@@ -1,0 +1,37 @@
+<div class="home">
+    <div class="container home__container">
+        <div class="home__body">
+            <div class="home__title">
+                Currency Converter
+            </div>
+            <div class="converter">
+                <div class="converter__left">
+                  <div class="converter__input-block">
+                    <input [(ngModel)]="inputValue1" (ngModelChange)="convertInput1ToInput2()" placeholder="Please, enter value" value="0" type="number" name="left-input" id="left-input">
+                    <select [(ngModel)]="currency1" (ngModelChange)="convertInput1ToInput2()" name="left-select" id="left-select">
+                      <option value="EUR">EUR</option>
+                      <option value="USD">USD</option>
+                      <option value="UAH">UAH</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="converter__mid">
+                  <div class="converter__to">
+                    To
+                  </div>
+                </div>
+                <div class="converter__right">
+                  <div class="converter__input-block">
+                    <input [(ngModel)]="inputValue2" (ngModelChange)="convertInput2ToInput1()" placeholder="Please, enter value" type="number" name="right-input" id="right-input">
+                    <select [(ngModel)]="currency2" (ngModelChange)="convertInput2ToInput1()" name="right-select" id="right-select">
+                      <option value="UAH">UAH</option>
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+</div>
