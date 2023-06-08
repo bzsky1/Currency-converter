@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CurrenciesService } from '../currencies.service';
 
 
@@ -58,11 +58,10 @@ export class HomeComponent {
   }
 
   getConversionRate(currency: string): number {
-    // Set up the conversion rates for each currency
     const conversionRates: any = {
       EUR: this.eurRates,
       USD: this.usdRates,
-      UAH: 1 // Assuming 1 UAH is equivalent to 1 UAH
+      UAH: 1
     };
 
     return conversionRates[currency];
