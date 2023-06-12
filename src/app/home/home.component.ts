@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CurrenciesService } from '../currencies.service';
 
 
@@ -7,8 +7,8 @@ import { CurrenciesService } from '../currencies.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
 
+export class HomeComponent implements OnInit {
   usdRates: any;
   eurRates: any;
   inputValue1: any;
@@ -42,7 +42,7 @@ export class HomeComponent {
     if (this.inputValue1 !== null) {
       this.inputValue2 = (this.inputValue1 * rate1 / rate2).toFixed(2);
     } else {
-      this.inputValue2 = '0';
+      this.inputValue2 = Number(0).toFixed(2);
     }
   }
 
@@ -53,7 +53,7 @@ export class HomeComponent {
     if (this.inputValue2 !== null) {
       this.inputValue1 = (this.inputValue2 * rate2 / rate1).toFixed(2);
     } else {
-      this.inputValue1 = `0`;
+      this.inputValue1 = Number(0).toFixed(2);
     }
   }
 
